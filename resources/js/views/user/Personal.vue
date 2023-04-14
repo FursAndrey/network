@@ -72,9 +72,10 @@ export default {
                     //         localStorage.removeItem('x_xsrf_token')
                     //         this.$router.push({name: 'user.login'})
                     //     })
-                    console.log(error);
+
+                    // console.log(error);
                 } else {
-                    console.log(error);
+                    // console.log(error);
                 }
             })
         },
@@ -99,7 +100,6 @@ export default {
                     this.image = res.data.data;
                 }).catch(error=>{
                     this.errors = error.response.data.errors;
-                    console.log(error.response.data.errors)
                 })
         },
         storePost() {
@@ -118,7 +118,6 @@ export default {
 
                 this.getPosts();
             }).catch(error=>{
-                console.log(error.response.data.errors)
                 this.errors = error.response.data.errors;
             })
         }

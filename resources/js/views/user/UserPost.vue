@@ -38,9 +38,10 @@ export default {
                     //         localStorage.removeItem('x_xsrf_token')
                     //         this.$router.push({name: 'user.login'})
                     //     })
-                    console.log(error);
+
+                    // console.log(error);
                 } else {
-                    console.log(error);
+                    // console.log(error);
                 }
             })
         }

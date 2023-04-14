@@ -125,7 +125,7 @@ export default {
                 post.is_liked = res.data.is_liked;
                 post.likes_count = res.data.likes_count;
             }).catch(error=>{
-                console.log(error);
+                // console.log(error);
             });
         },
         toggleFormRepost() {
@@ -173,7 +173,7 @@ export default {
                     this.comments = res.data.data;
                     this.post.comments_count = this.comments.length;
                 }).catch(error=>{
-                    console.log(error);
+                    // console.log(error);
                 });
         },
         

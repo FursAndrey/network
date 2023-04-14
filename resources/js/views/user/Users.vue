@@ -34,7 +34,6 @@ export default {
     methods: {
         getUsers() {
             axios.get('/api/users').then(res => {
-                // console.log(res);
                 this.users = res.data.data
             }).catch(error=>{
                 if (error.response.status == 401) {
@@ -44,9 +43,10 @@ export default {
                     //         localStorage.removeItem('x_xsrf_token')
                     //         this.$router.push({name: 'user.login'})
                     //     })
-                    console.log(error);
+
+                    // console.log(error);
                 } else {
-                    console.log(error);
+                    // console.log(error);
                 }
             })
         },
@@ -54,7 +54,7 @@ export default {
             axios.get('/api/users/'+user.id+'/following').then(res => {
                 user.is_followed = res.data.is_followed;
             }).catch(error=>{
-                console.log(error);
+                // console.log(error);
             });
         }
     }

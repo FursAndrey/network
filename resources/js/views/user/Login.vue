@@ -38,7 +38,7 @@ export default {
                         })
                         .catch(err => {
                             this.errorMessage = err.response.data.message;
-                            console.log(err);
+                            // console.log(err);
                         })
                 })
         }

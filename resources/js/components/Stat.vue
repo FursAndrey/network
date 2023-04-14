@@ -30,7 +30,6 @@ export default {
         getStat() {
             axios.get(`/api/users/stat/${this.userId}`).then(res => {
                 this.stat = res.data.data
-                console.log(this.stat);
             }).catch(error=>{
                 if (error.response.status == 401) {
                     // //неавторизован (костыль + дублирование)
@@ -39,9 +38,10 @@ export default {
                     //         localStorage.removeItem('x_xsrf_token')
                     //         this.$router.push({name: 'user.login'})
                     //     })
-                    console.log(error);
+                    
+                    // console.log(error);
                 } else {
-                    console.log(error);
+                    // console.log(error);
                 }
             })
         },
