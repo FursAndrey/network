@@ -32,7 +32,7 @@
         </div>
         
         <h2 class="text-3xl">Posts</h2>
-        <Stat :userId="null"></Stat>
+        <!-- <Stat :userId="null"></Stat> -->
         <div v-if="posts">
             <Post v-for="post in posts" :key="post.id" :post="post"></Post>
         </div>
